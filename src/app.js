@@ -6,35 +6,45 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
+  //Declaramos las funciones
+  function randomPalo() {
+    const palos = ["♦", "♥", "♠", "♣"];
 
-  //Declaramos las arrays
-  let element = ["corazon", "trebol", "pica", "diamante"];
-  let number = [
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K",
-    "A"
-  ];
+    let indexPalo = Math.floor(Math.random() * palos.length);
+    return palos[indexPalo];
+  }
 
-  //Variables Random
-  let randomElements = Math.floor(Math.random() * elements.length);
-  let randomNumbers = Math.floor(Math.random() * numbers.length);
+  function randomNumbers() {
+    const numbers = ["A", "2", "3", "4", "5", "6", "8", "9", "J", "Q", "K"];
+    let indexNumber = Math.floor(Math.random() * numbers.length);
+    return numbers[indexNumber];
+  }
 
-  //Accedemos a los elementos
+  //Guardamos las funciones
+
+  let generarPalo = randomPalo();
+  let generarNumero = randomNumbers();
+
+  //Selección de elementos del HTML
   let top = document.querySelector(".top");
-  let numbers = document.querySelector(".numbers");
   let bottom = document.querySelector(".bottom");
+  let numero = document.querySelector(".numbers");
 
-  //Manipulacion
-  numbers.innerHTML = number[randomNumbers];
+  //Insertar las variables en el HTML
+  top.innerHTML = generarPalo;
+  bottom.innerHTML = generarPalo;
+  numero.innerHTML = generarNumero;
+
+  //Codicionales para asignar color a los palos
+  if (top.innerHTML === "♦" || top.innerHTML === "♥") {
+    top.style.color = "red";
+  } else {
+    top.style.color = "black";
+  }
+
+  if (bottom.innerHTML === "♦" || bottom.innerHTML === "♥") {
+    bottom.style.color = "red";
+  } else {
+    bottom.style.color = "black";
+  }
 };
