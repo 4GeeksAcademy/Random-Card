@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <title>Random Card</title>
+    <link 
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link href="style.css "rel="stylesheet" type="text/css">
+    <script setTimeout>
+
+    </script>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="container-fluid p-3 my-3 border">
+      <h1>Este es mi generador de cartas aleatorias</h1>
+      <p>Para más información seguidme en mi cuenta de Git  <a href=https://github.com/4GeeksAcademy/Random-Card.git>Antonio</a
+        >
+
     </div>
+    <div class="container position-absolute m-2 ">
+      <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+        <button onClick="window.location.reload();"
+          type="button" class="btn btn-outline-success"> Change Card </button>
+          <!-- boton cambio de carta -->
+        <button onClick="refresh();" class="btn btn-outline-warning">
+          Refresh
+        </button>
+        <!-- boton refrescar la pagina -->
+      </div>
+
+      <div class="card mt-2">
+        <div class="top text-star"></div>
+        <div class="number text-center"></div>
+        <div class="bottom text-sar"></div>
+      </div>
+
+      <script src="./src/app.js"></script>
   </body>
 </html>
