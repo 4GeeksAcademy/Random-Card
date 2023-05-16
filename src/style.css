@@ -35,6 +35,7 @@ button {
   line-height: 60px;
   font-size: 60px;
   height: 25%;
+  margin-left: 68%;
 }
 .container.p-3 {
   background-color: white;
